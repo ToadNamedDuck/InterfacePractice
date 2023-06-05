@@ -27,7 +27,7 @@ namespace InterfacePractice
                 ev.ChargeBattery();
             }
 
-            foreach(??? ev in electricVehicles)
+            foreach(IElectric ev in electricVehicles)
             {
                 Console.WriteLine($"{ev.CurrentChargePercentage}");
             }
@@ -37,23 +37,23 @@ namespace InterfacePractice
             Ram ram = new Ram ();
             Cessna cessna150 = new Cessna ();
 
-            List<???> gasVehicles = new List<???>() {
+            List<IGasoline> gasVehicles = new List<IGasoline>() {
                 ram, cessna150
             };
 
             Console.WriteLine("Gas Vehicles");
-            foreach(??? gv in gasVehicles)
+            foreach(IGasoline gv in gasVehicles)
             {
                 Console.WriteLine($"{gv.CurrentTankPercentage}");
             }
 
-            foreach(??? gv in gasVehicles)
+            foreach(IGasoline gv in gasVehicles)
             {
                 // This should completely refuel the gas tank
                 gv.RefuelTank();
             }
 
-            foreach(??? gv in gasVehicles)
+            foreach(IGasoline gv in gasVehicles)
             {
                 Console.WriteLine($"{gv.CurrentTankPercentage}");
             }

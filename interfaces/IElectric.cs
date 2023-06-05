@@ -2,8 +2,8 @@ namespace InterfacePractice
 {
     public interface IElectric
     {
-        public int CurrentChargePercentage {get;}
+        int CurrentChargePercentage {get;}
 
-        public void ChargeBattery();
+        void ChargeBattery();
     }
 }
